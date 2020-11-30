@@ -20,7 +20,7 @@ public class Compra {
     private String medioPago;
 
     private String comentario;
-    private boolean estado;
+    private Boolean estado;
 
     public Integer getIdCompra() {
         return idCompra;
@@ -62,11 +62,11 @@ public class Compra {
         this.comentario = comentario;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 }
