@@ -30,6 +30,18 @@ public class Producto {
 
     private Boolean estado;
 
+    /**
+     * Se hace la anotacion N to 1, porque en el diagrama asi esta la
+     * relacion
+     * tambien tiene una anotacion joincolumn para unir categoria con
+     * el id_categoria y ademas para que desde aca no se pueda actualizar,
+     * insertar, eliminar o editar una categoria. Para eso se tiene su propia
+     * clase
+     */
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false,updatable = false)
+    private Categoria categoria;
+
     public Integer getIdProducto() {
         return idProducto;
     }
